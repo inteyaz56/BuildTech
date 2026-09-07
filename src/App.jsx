@@ -15,7 +15,7 @@ import Projects from "./projects/Project";
 import ProjectDetails from "./projects/ProjectDetail";
 import Sites from "./sites/Sites";
 import SiteDetails from "./sites/SiteDetails";
-import Tasks from "./tasks/tasks";
+import Tasks from "./tasks/Tasks";
 import TaskDetails from "./tasks/TaskDetails";
 import Inventory from "./inventory/Inventory";
 import Finance from "./finance/Finance";
