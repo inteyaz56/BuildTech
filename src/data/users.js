@@ -1,0 +1,58 @@
+export const users = [
+  {
+    id: 1,
+    name: "Rajesh Kumar",
+    role: "owner",
+    roleName: "Owner",
+    initials: "RK",
+  },
+  {
+    id: 2,
+    name: "Amit Sharma",
+    role: "project_manager",
+    roleName: "Project Manager",
+    initials: "AS",
+  },
+  {
+    id: 3,
+    name: "Vikash Singh",
+    role: "site_manager",
+    roleName: "Site Manager",
+    initials: "VS",
+  },
+  {
+    id: 4,
+    name: "Neha Verma",
+    role: "accountant",
+    roleName: "Accountant",
+    initials: "NV",
+  },
+  {
+    id: 5,
+    name: "Rahul Mehta",
+    role: "procurement_manager",
+    roleName: "Procurement Manager",
+    initials: "RM",
+  },
+  {
+    id: 6,
+    name: "Suresh Kumar",
+    role: "supervisor",
+    roleName: "Supervisor",
+    initials: "SK",
+  },
+  {
+    id: 7,
+    name: "ABC Contractors",
+    role: "contractor",
+    roleName: "Contractor",
+    initials: "AC",
+  },
+  {
+    id: 8,
+    name: "Admin User",
+    role: "admin",
+    roleName: "Administrator",
+    initials: "AU",
+  },
+];
