@@ -2,7 +2,7 @@ import SimpleDashboard from "../components/SimpleDashboard";
 import DashboardCard from "../components/DashboardCard";
 import { dashboardData } from "../data/dashboardData";
 
-function SiteManagerDashboard() {
+const SiteManagerDashboard = () => {
   return (
     <SimpleDashboard
       eyebrow="SITE OPERATIONS"
@@ -31,7 +31,7 @@ function SiteManagerDashboard() {
       </div>
     </SimpleDashboard>
   );
-}
+};
 
 function Work({ title, progress }) {
   return (

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const roleMenus = {
   owner: [
@@ -144,33 +145,49 @@ function Sidebar({ mobileOpen, setMobileOpen }) {
           </p>
 
           <div className="space-y-1">
-            {menu.map(([label, icon], index) => (
-              <button
-                key={label}
-                onClick={() => setMobileOpen(false)}
-                className={`
-                  flex w-full items-center gap-3
-                  rounded-xl px-3 py-3
-                  text-sm font-medium
-                  transition
-                  ${
-                    index === 0
-                      ? "bg-amber-50 text-amber-700"
-                      : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
-                  }
-                `}
-              >
-                <span className="flex w-5 justify-center">{icon}</span>
+            {menu.map(([name, icon]) => {
+              const isDashboard = name === "Dashboard";
 
-                {label}
-              </button>
-            ))}
+              let path;
+
+              if (isDashboard) {
+                path = "/";
+              } else if (name === "Projects") {
+                path = "/projects";
+              } else if (name === "My Projects") {
+                path = "/my-projects";
+              } else {
+                path = `/${name
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")
+                  .replace(/&/g, "")}`;
+              }
+
+              return (
+                <NavLink
+                  key={name}
+                  to={path}
+                  onClick={() => setMobileOpen(false)}
+                  className={({ isActive }) =>
+                    `flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition ${
+                      isActive
+                        ? "bg-amber-50 text-amber-700"
+                        : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                    }`
+                  }
+                >
+                  <span className="w-5 text-center text-base">{icon}</span>
+
+                  <span>{name}</span>
+                </NavLink>
+              );
+            })}
           </div>
         </nav>
 
         {/* User */}
 
-        <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 p-4">
+        <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 bg-white p-4">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-xs font-bold text-white">
               {currentUser.initials}

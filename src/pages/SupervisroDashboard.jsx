@@ -2,7 +2,7 @@ import SimpleDashboard from "../components/SimpleDashboard";
 import DashboardCard from "../components/DashboardCard";
 import { dashboardData } from "../data/dashboardData";
 
-function SupervisorDashboard() {
+const SupervisorDashboard = () => {
   return (
     <SimpleDashboard
       eyebrow="FIELD OPERATIONS"
@@ -38,6 +38,6 @@ function SupervisorDashboard() {
       </DashboardCard>
     </SimpleDashboard>
   );
-}
+};
 
 export default SupervisorDashboard;

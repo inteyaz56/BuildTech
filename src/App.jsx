@@ -1,3 +1,4 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Layout from "./components/Layout";
@@ -10,42 +11,51 @@ import AccountantDashboard from "./pages/AccountantDashboard";
 import ProcurementDashboard from "./pages/ProcurementDashboard";
 import SupervisorDashboard from "./pages/SupervisroDashboard";
 import ContractorDashboard from "./pages/ContractorDashboard";
+import Projects from "./projects/Project";
 
-function App() {
+function Dashboard() {
   const currentUser = useSelector((state) => state.user.currentUser);
 
-  const renderDashboard = () => {
-    switch (currentUser.role) {
-      case "owner":
-        return <OwnerDashboard />;
+  switch (currentUser.role) {
+    case "owner":
+      return <OwnerDashboard />;
 
-      case "admin":
-        return <AdminDashboard />;
+    case "admin":
+      return <AdminDashboard />;
 
-      case "project_manager":
-        return <ProjectManagerDashboard />;
+    case "project_manager":
+      return <ProjectManagerDashboard />;
 
-      case "site_manager":
-        return <SiteManagerDashboard />;
+    case "site_manager":
+      return <SiteManagerDashboard />;
 
-      case "accountant":
-        return <AccountantDashboard />;
+    case "accountant":
+      return <AccountantDashboard />;
 
-      case "procurement_manager":
-        return <ProcurementDashboard />;
+    case "procurement_manager":
+      return <ProcurementDashboard />;
 
-      case "supervisor":
-        return <SupervisorDashboard />;
+    case "supervisor":
+      return <SupervisorDashboard />;
 
-      case "contractor":
-        return <ContractorDashboard />;
+    case "contractor":
+      return <ContractorDashboard />;
 
-      default:
-        return <OwnerDashboard />;
-    }
-  };
-
-  return <Layout>{renderDashboard()}</Layout>;
+    default:
+      return <OwnerDashboard />;
+  }
 }
 
-export default App;
+export default function App() {
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+
+        <Route path="/projects" element={<Projects />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Layout>
+  );
+}

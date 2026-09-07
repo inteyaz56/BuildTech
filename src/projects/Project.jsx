@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projects } from "./projects";
+import { projects } from "./projectdata";
 
 function formatCurrency(amount) {
   if (amount >= 10000000) {
@@ -29,7 +29,7 @@ function getStatusStyle(status) {
   }
 }
 
-export default function Projects() {
+const Projects = () => {
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
 
@@ -235,4 +235,6 @@ export default function Projects() {
       )}
     </div>
   );
-}
+};
+
+export default Projects;

@@ -2,7 +2,7 @@ import SimpleDashboard from "../components/SimpleDashboard";
 import DashboardCard from "../components/DashboardCard";
 import { dashboardData } from "../data/dashboardData";
 
-function ProjectManagerDashboard() {
+const ProjectManagerDashboard = () => {
   return (
     <SimpleDashboard
       eyebrow="PROJECT MANAGEMENT"
@@ -49,7 +49,7 @@ function ProjectManagerDashboard() {
       </div>
     </SimpleDashboard>
   );
-}
+};
 
 function Project({ name, progress, status }) {
   const statusStyle =
