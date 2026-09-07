@@ -13,7 +13,8 @@ import SupervisorDashboard from "./pages/SupervisroDashboard";
 import ContractorDashboard from "./pages/ContractorDashboard";
 import Projects from "./projects/Project";
 import ProjectDetails from "./projects/ProjectDetail";
-
+import Sites from "./sites/Sites";
+import SiteDetails from "./sites/SiteDetails";
 function Dashboard() {
   const currentUser = useSelector((state) => state.user.currentUser);
 
@@ -56,6 +57,9 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
 
         <Route path="/projects/:id" element={<ProjectDetails />} />
+
+        <Route path="/sites" element={<Sites />} />
+        <Route path="/sites/:id" element={<SiteDetails />} />
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

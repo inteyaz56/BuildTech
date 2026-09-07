@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { sites } from "./sites";
+import { sites } from "./siteData";
 
 function getStatusStyle(status) {
   switch (status) {
