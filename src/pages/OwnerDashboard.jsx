@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { projects } from "../projects/projectdata";
 import { sites } from "../sites/siteData";
-import { tasks } from "../tasks/taskData.js";
+import { tasks } from "../tasks/taskData";
 import { inventory } from "../inventory/inventoryData";
 import { projectFinance } from "../finance/financeData";
 
