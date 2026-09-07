@@ -15,6 +15,9 @@ import Projects from "./projects/Project";
 import ProjectDetails from "./projects/ProjectDetail";
 import Sites from "./sites/Sites";
 import SiteDetails from "./sites/SiteDetails";
+import Tasks from "./tasks/tasks";
+import TaskDetails from "./tasks/TaskDetails";
+
 function Dashboard() {
   const currentUser = useSelector((state) => state.user.currentUser);
 
@@ -59,7 +62,12 @@ export default function App() {
         <Route path="/projects/:id" element={<ProjectDetails />} />
 
         <Route path="/sites" element={<Sites />} />
+
         <Route path="/sites/:id" element={<SiteDetails />} />
+
+        <Route path="/tasks" element={<Tasks />} />
+
+        <Route path="/tasks/:id" element={<TaskDetails />} />
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
