@@ -1,0 +1,32 @@
+export const projects = [
+  {
+    id: 1,
+    name: "Green Valley Residency",
+    location: "Mohali",
+    manager: "Amit Sharma",
+    progress: 67,
+    budget: 52000000,
+    spent: 38000000,
+    status: "On Track",
+  },
+  {
+    id: 2,
+    name: "Metro Heights",
+    location: "Chandigarh",
+    manager: "Amit Sharma",
+    progress: 42,
+    budget: 40000000,
+    spent: 43200000,
+    status: "Delayed",
+  },
+  {
+    id: 3,
+    name: "Palm Residency",
+    location: "Panchkula",
+    manager: "Amit Sharma",
+    progress: 31,
+    budget: 30000000,
+    spent: 28000000,
+    status: "At Risk",
+  },
+];
