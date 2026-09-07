@@ -12,6 +12,7 @@ import ProcurementDashboard from "./pages/ProcurementDashboard";
 import SupervisorDashboard from "./pages/SupervisroDashboard";
 import ContractorDashboard from "./pages/ContractorDashboard";
 import Projects from "./projects/Project";
+import ProjectDetails from "./projects/ProjectDetail";
 
 function Dashboard() {
   const currentUser = useSelector((state) => state.user.currentUser);
@@ -53,6 +54,8 @@ export default function App() {
         <Route path="/" element={<Dashboard />} />
 
         <Route path="/projects" element={<Projects />} />
+
+        <Route path="/projects/:id" element={<ProjectDetails />} />
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
