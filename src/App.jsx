@@ -4,11 +4,11 @@ import Layout from "./components/Layout";
 
 import OwnerDashboard from "./pages/OwnerDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
-import ProjectManagerDashboard from "./pages/ProjectManagerDashboard";
-import SiteManagerDashboard from "./pages/SiteManagerDashboard";
+import ProjectManagerDashboard from "./pages/ProjectMangaerDashboard";
+import SiteManagerDashboard from "./pages/SiteManagerDashbaord";
 import AccountantDashboard from "./pages/AccountantDashboard";
 import ProcurementDashboard from "./pages/ProcurementDashboard";
-import SupervisorDashboard from "./pages/SupervisorDashboard";
+import SupervisorDashboard from "./pages/SupervisroDashboard";
 import ContractorDashboard from "./pages/ContractorDashboard";
 
 function App() {
