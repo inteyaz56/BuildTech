@@ -17,6 +17,7 @@ import Sites from "./sites/Sites";
 import SiteDetails from "./sites/SiteDetails";
 import Tasks from "./tasks/tasks";
 import TaskDetails from "./tasks/TaskDetails";
+import Inventory from "./inventory/Inventory";
 
 function Dashboard() {
   const currentUser = useSelector((state) => state.user.currentUser);
@@ -68,6 +69,7 @@ export default function App() {
         <Route path="/tasks" element={<Tasks />} />
 
         <Route path="/tasks/:id" element={<TaskDetails />} />
+        <Route path="/inventory" element={<Inventory />} />
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
